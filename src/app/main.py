@@ -10,6 +10,10 @@ app = FastAPI(
 def read_root():
     return {"message": "Welcome to the Notes App"}
 
+@app.get("/health")
+def read_health():
+    return {"status": "ok"}
+
 @app.on_event("startup")
 async def startup_event():
     print("INFO: Application startup complete.")
