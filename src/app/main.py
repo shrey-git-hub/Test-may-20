@@ -21,3 +21,5 @@ async def startup_event():
 @app.on_event("shutdown")
 async def shutdown_event():
     print("INFO: Application shutdown complete.")
+
+#adding random comments
